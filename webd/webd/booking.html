@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Booking Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      background: #fff;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #007BFF;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Booking Form</h1>
+    <form action="payment.html" method="GET">
+      <label for="type">Booking Type:</label>
+      <input type="text" id="type" name="type" placeholder="e.g., Hostel" required>
+
+      <label for="for">Booking For:</label>
+      <input type="text" id="for" name="for" placeholder="e.g., BL Residency Samraddh" required>
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <button type="submit">Proceed to Payment</button>
+    </form>
+  </div>
+</body>
+</html>

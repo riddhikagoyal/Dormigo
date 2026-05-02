@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .payment-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    .payment-box h2 {
+      margin-bottom: 20px;
+    }
+
+    .payment-box button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .upi-btn { background-color: #0052cc; }
+    .qr-btn { background-color: #007bff; }
+    .card-btn { background-color: #0088ff; }
+
+    .section {
+      display: none;
+      margin-top: 20px;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .qr-section img {
+      width: 200px;
+      margin-top: 10px;
+    }
+
+    .section small {
+      display: block;
+      margin-top: 10px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="payment-box">
+    <h2>Select Payment Method</h2>
+    <button class="upi-btn">Pay via UPI</button>
+    <button class="qr-btn">Pay via QR Code</button>
+    <button class="card-btn">Pay via Card/Netbanking</button>
+
+    <!-- UPI Section -->
+    <div class="section upi-section">
+      <p><strong>UPI ID:</strong> yourupi@bank</p>
+      <small>Use any UPI app to pay (e.g. GPay, PhonePe)</small>
+    </div>
+
+    <!-- QR Code Section -->
+    <div class="section qr-section">
+      <p>Scan this QR Code to Pay:</p>
+      <img src="https://img.freepik.com/free-vector/scan-me-qr-code_78370-2915.jpg" alt="QR Code">
+      <small>Dummy QR Code for ₹100 to yourupi@bank</small>
+    </div>
+
+    <!-- Card Section -->
+    <div class="section card-section">
+      <p>Redirecting to payment gateway...</p>
+      <small>This is a placeholder. Add your actual gateway link.</small>
+    </div>
+  </div>
+
+  <script>
+    const upiBtn = document.querySelector('.upi-btn');
+    const qrBtn = document.querySelector('.qr-btn');
+    const cardBtn = document.querySelector('.card-btn');
+
+    const upiSection = document.querySelector('.upi-section');
+    const qrSection = document.querySelector('.qr-section');
+    const cardSection = document.querySelector('.card-section');
+
+    function hideAll() {
+      upiSection.style.display = 'none';
+      qrSection.style.display = 'none';
+      cardSection.style.display = 'none';
+    }
+
+    upiBtn.addEventListener('click', () => {
+      hideAll();
+      upiSection.style.display = 'block';
+    });
+
+    qrBtn.addEventListener('click', () => {
+      hideAll();
+      qrSection.style.display = 'block';
+    });
+
+    cardBtn.addEventListener('click', () => {
+      hideAll();
+      cardSection.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

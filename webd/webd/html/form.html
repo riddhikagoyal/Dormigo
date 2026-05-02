@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let name= prompt('Enter your name');
+        console.log(name)
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Brand Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-container label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #333;
+        }
+        .form-container input[type="text"], 
+        .form-container input[type="email"],
+        .form-container input[type="number"],
+        .form-container select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="p1"> Paragraph 1</p> 
+<p> Paragraph 2</p> 
+<script> 
+    //Selects paragraph having id 'p1'
+    document.getElementById('p1'); 
+</script> 
+
+    <div>
+        <h3> <input list="states" placeholder="State">
+            <datalist id="states">
+                <option value="Andhra Pradesh">
+                    <option value="Arunachal Pradesh">
+                    <option value="Assam">
+                    <option value="Bihar">
+                    <option value="Chhattisgarh">
+                    <option value="Goa">
+                    <option value="Gujarat">
+                    <option value="Haryana">
+                    <option value="Himachal Pradesh">
+                    <option value="Jharkhand">
+                    <option value="Karnataka">
+                    <option value="Kerala">
+                    <option value="Madhya Pradesh">
+                    <option value="Maharashtra">
+                    <option value="Manipur">
+                    <option value="Meghalaya">
+                    <option value="Mizoram">
+                    <option value="Nagaland">
+                    <option value="Odisha">
+                        <option value="Punjab">
+                            <option value="Rajasthan">
+                            <option value="Sikkim">
+                            <option value="Tamil Nadu">
+                            <option value="Telangana">
+                            <option value="Tripura">
+                            <option value="Uttar Pradesh">
+                            <option value="Uttarakhand">
+                            <option value="West Bengal">
+                            <option value="Andaman and Nicobar Islands">
+                            <option value="Chandigarh">
+                            <option value="Dadra and Nagar Haveli">
+                            <option value="Daman and Diu">
+                            <option value="Delhi">
+                            <option value="Lakshadweep">
+                            <option value="Puducherry">
+            </datalist></h3>
+        </div>
+<div><h3>
+    <input type="tel" placeholder="Phone">
+
+</div></h3>
+<div><h3>
+    <input type="email" placeholder="Email">
+</div></h3>
+
+<div>
+    <button class="search-icon">
+        <img class="search-image" src="icons8-search.svg">
+    </button>
+
+
+    
+    
+

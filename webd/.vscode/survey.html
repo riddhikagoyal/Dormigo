@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Election Survey Form</title>
+<style>
+    /* Global Styles */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #74EBD5, #ACB6E5);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        background: #fff;
+        max-width: 600px;
+        width: 90%;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+    }
+
+    .container:hover {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 18px;
+        color: #555;
+        display: block;
+        margin: 15px 0 8px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        transition: 0.3s;
+        font-size: 16px;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    .radio-group label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        color: #fff;
+        background: #4CAF50;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #45a049;
+    }
+
+    .btn:active {
+        background: #3e8e41;
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            padding: 25px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Indian Election Survey Form</h2>
+    
+    <form action="#" method="POST">
+        <!-- Personal Details -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" min="18" required>
+
+        
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        
+
+        <!-- Election Survey Question -->
+        <label>After how many years should elections be held in India?</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="years" value="3"> Every 3 years
+            </label>
+            <label>
+                <input type="radio" name="years" value="4"> Every 4 years
+            </label>
+            <label>
+                <input type="radio" name="years" value="5" checked> Every 5 years (Current)
+            </label>
+           
+            <label>
+                <input type="radio" name="years" value="10"> Every 10 years
+            </label>
+        </div>
+
+        <!-- Additional Feedback -->
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

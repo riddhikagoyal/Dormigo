@@ -1,0 +1,161 @@
+:root {
+  --accent: #10b981;
+  --accent-100: #d1fae5;
+  --text-900: #111827;
+  --text-700: #374151;
+  --text-600: #4b5563;
+  --bg: #f9fafb;
+  --card: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Inter","Poppins","Segoe UI",system-ui,-apple-system,Arial,Helvetica,sans-serif;
+  margin: 0;
+  color: var(--text-900);
+}
+
+.city-item {
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.city-item:hover {
+  transform: scale(1.08);
+  background: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.active-city {
+  border: 2px solid var(--accent);
+  background: #f0f8ff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.hover-card {
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+.hover-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Header */
+.hero-header {
+  background: linear-gradient(90deg, #ffffff, #f9fafb);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hero-header .title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-900);
+}
+
+/* Header Buttons */
+.my-bookings,
+.login-signup {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.my-bookings:hover,
+.login-signup:hover {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+.category-section {
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.category-section h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--text-900);
+}
+
+.category-section p {
+  font-size: 0.98rem;
+  color: var(--text-600);
+  max-width: 560px;
+}
+
+/* Cards */
+.category-card {
+  width: 240px;
+  height: 160px;
+  background: var(--card);
+  border: 1.5px solid var(--accent-100);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.category-card:hover {
+  background: #f9fafb;
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+  border-color: #34d399;
+}
+
+.category-card i {
+  font-size: 36px;
+  color: var(--text-700);
+  margin-bottom: 10px;
+}
+
+.category-card span {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-900);
+}
+
+/* Alternate background for variety */
+.bg-light-alt {
+  background: #fdfdfd;
+  border-radius: 12px;
+}
+
+/* Improve section spacing */
+.category-section {
+  margin-bottom: 2rem;
+}
+
+/* Title & description tweaks */
+.category-section h2 {
+  color: var(--text-900);
+}
+
+.category-section p {
+  max-width: 500px;
+}
+
+
+@media (max-width: 768px) {
+  .category-card { width: 200px; height: 140px; }
+  .category-section { text-align: center; padding: 2rem 1rem; }
+  .hero-header .title { font-size: 1.4rem; }
+}

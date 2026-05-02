@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAY</title>
+
+     <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+
+
+    .category-image{
+        width: 550px;
+        height: 600px;
+            height: 280px;
+            display: inline-block;
+            object-fit: contain;
+    }
+    .categories{
+        display: inline-block;
+            width: 550px;
+            height: 400px;
+            margin-right: 120px;
+            margin-left: 60px;
+        
+        
+    }
+    .category-description{
+        text-align: center;
+            background-color: grey;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 2px;
+            padding-top: 2px;           
+            font-size: large;
+            text-decoration: none;
+            color: white;
+            margin-left: 230px;
+            cursor: pointer
+
+
+    }
+    .stay{
+        font-size: 80px;
+        color:  #77a8a8;
+        margin-top: 40px;
+    }
+    
+
+     .header{
+       background-color:  grey;
+       height: 120px;
+
+
+     }
+    
+     .wishlist{
+        margin-left: 1200px;
+            display: inline-block;
+            margin-top: 0px;
+            position: absolute;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            color: white; 
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            font-size: large;
+            border-radius: 15px;
+            top: 50px;
+     }
+     .title{
+            font-size: 40px;
+            color: white;
+            font-family: cursive;
+            margin-bottom: 15px;
+            display: inline-block;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        .title{
+            font-size: 40px;
+            color: white;
+            font-family: cursive;
+            margin-bottom: 15px;
+            display: inline-block;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .header{
+       background-color:  #484f4f;
+       height: 200px;}
+
+      
+     .cities{
+        display: inline-block;
+        margin-left: 30px;    
+        margin-right: 20px;  
+        margin-top: 30px;
+}
+.kota{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 60px;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+
+}
+
+
+     .cities-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 60px;
+    background-color: #484f4f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+.kota-hostel-1{
+ 
+  align-items: center;
+  display: inline-block;
+}
+
+.hostel-name{
+  display: inline-block;
+  margin-top: 0px;
+  position: absolute;
+  margin-left: 40px;
+  font-size: 40px;
+}
+.ratings{
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: green;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+  margin-left: 40px;
+  border-radius: 2px;
+  font-size: 15px;
+
+}
+.gender-category{
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: gray;
+  color: white;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 40px;
+  font-size: 15px;
+
+}
+.location-image{
+  margin-top: 150px;
+  position: absolute;
+  margin-left: 40px;
+  width: 20px;
+  height: 20px;
+}
+.hostel-location{
+  margin-left: 65px;
+  position: absolute;
+  margin-top: 150px;
+  font-size: 18px;
+}
+.telephone-image{
+  position: absolute;
+  margin-top: 200px;
+  font-size: 18px;
+  margin-left: 40px;
+}
+.contact-number{
+  margin-left: 65px;
+  position: absolute;
+  margin-top: 200px;
+  font-size: 18px;
+
+}
+#booking {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+#booking h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#booking label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#booking input,
+#booking select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.book-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: #492773;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background-color: #2813ac;
+}
+
+.hero-header {
+        background: linear-gradient(90deg, #2c3e50, #34495e);
+        color: white;
+        padding: 2rem 3rem;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        /* 👇 add space below header */
+        margin-bottom: 3rem;
+      }
+
+      .hero-header .title {
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+.login-signup,
+      .my-bookings {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        background-color: #1abc9c;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-signup:hover,
+      .my-bookings:hover {
+        background-color: #16a085;
+      }
+
+
+
+
+    
+
+    
+</style>
+</head>
+<body>
+
+ <header class="hero-header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <div class="title">staySync</div>
+          <div id="auth-section" class="d-flex gap-3">
+            <!-- JS will replace this -->
+            <a class="my-bookings" href="mybookings.html">My Bookings</a>
+            <a class="login-signup" href="Login.html">Login / SignUp</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="kota-hostel-1">
+      <img src="https://content.jdmagicbox.com/comp/kota-rajasthan/f2/9999px744.x744.230710175828.w1f2/catalogue/mantra-library-rajeev-gandhi-nagar-kota-rajasthan-libraries-7qestlsdeg.jpg" width="300px" height="250px">
+      <p class="hostel-name">Mantra Library</p>
+      <button class="ratings">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+      </svg>
+      <span> 4.9</span> </button>
+      <button class="gender-category"> Open 24 hours</button>
+      <a href="booking.html?type=Library&name=mantra%20Library" class="book-btn">Book Now</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="location-image" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
+      </svg>
+      <span class="hostel-location"> Building No- C 422, New Rajeev Gandhi Nagar, Rajeev Gandhi Nagar, Kota-rajasthan - 324005 (Below SBI Bnk)</span>
+
+      </span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="telephone-image" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+      </svg>
+      <span class="contact-number">08128900827</span>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <img src="https://content.jdmagicbox.com/comp/kota-rajasthan/n9/9999px744.x744.190112173546.x5n9/catalogue/galaxy-library-mahaveer-nagar-ii-kota-rajasthan-24-hours-libraries-ohxvk823x3-250.jpg" width="300px" height="250px">
+      <p class="hostel-name">Galaxy Library</p>
+      <button class="ratings">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+      </svg>
+      <span> 4.9</span> </button>
+      <button class="gender-category"> Open 24 hours</button>
+      <a href="booking.html?type=Library&name=galaxy%20Library" class="book-btn">Book Now</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="location-image" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
+      </svg>
+      <span class="hostel-location"> MPA-03, II Nd Floor, Mahaveer Nagar 2, Kota-Rajasthan - 324005 (Opposite Central Public School)
+
+      </span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="telephone-image" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+      </svg>
+      <span class="contact-number">078777 77401</span>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <img src="https://content.jdmagicbox.com/comp/kota-rajasthan/j7/9999px744.x744.220912165447.m5j7/catalogue/study-point-library-kunadi-kota-rajasthan-libraries-jt2acmponz-250.jpg" width="300px" height="250px">
+      <p class="hostel-name">Study Point Library</p>
+      <button class="ratings">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+      </svg>
+      <span> 4.9</span> </button>
+      <button class="gender-category"> Open 24 hours</button>
+      <a href="booking.html?type=Library&name=study%20point%20Library" class="book-btn">Book Now</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="location-image" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
+      </svg>
+      <span class="hostel-location"> Study Point Library, A-34 Opposite to Allen Samyak, Kota 9, Kota-Rajasthan - 324008 (Opposite Allen Samyak, Landmark City Kunhari Kota)</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="telephone-image" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+      </svg>
+      <span class="contact-number">96802 58257</span>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <img src="https://content.jdmagicbox.com/comp/kota-rajasthan/y5/9999px744.x744.230204175737.q2y5/catalogue/oxford-library-talwandi-kota-rajasthan-libraries-h21eequwx9-250.jpg" width="300px" height="250px">
+      <p class="hostel-name">Oxford Library</p>
+      <button class="ratings">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+      </svg>
+      <span> 4.9</span> </button>
+      <button class="gender-category"> Open 24 hours</button>
+      <a href="booking.html?type=Library&name=oxford%20Library" class="book-btn">Book Now</a>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="location-image" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
+      </svg>
+      <span class="hostel-location"> Plot No 886, Sabji Mandi Road, Mahaveer Nagar 2, Kota-Rajasthan - 324005 (Near SBI Bank)</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="telephone-image" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+      </svg>
+      <span class="contact-number">096362 57322</span>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <img src="https://content3.jdmagicbox.com/comp/kota-rajasthan/i2/9999px744.x744.230406004906.a7i2/catalogue/book-n-grow-library-kota-rajasthan-libraries-at3bn3tc0b.jpg" width="300px" height="250px">
+      <p class="hostel-name">Book N Grow</p>
+      <button class="ratings">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+      </svg>
+      <span> 4.8</span> </button>
+      <button class="gender-category"> Open 24 hours</button>
+    <a href="booking.html?type=Library&name=book%20N%20grow%20Library" class="book-btn">Book Now</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="location-image" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
+      </svg>
+      <span class="hostel-location"> Landmark City, Basement, M3 Mall, Electricity Board Area, Kota, Rajasthan 324008, Kota-Rajasthan - 324008 (Near Allen Sangyan)</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="telephone-image" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+      </svg>
+      <span class="contact-number"> 95882 92167</span>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSExMVFRUXGBcXGBgYFRgYGBgXGBUYFhcYFxsYHiggGholHRUXITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0lICUtLS0tLS4rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAECBwj/xABFEAABAgQDBAcECAMHBAMAAAABAhEAAwQhBRIxQVFhcQYiMoGRobETwdHwBxQjQlJicuGSorIkM3OCwtLxFTRT4kODo//EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACoRAAICAQMEAgEDBQAAAAAAAAABAhEDEiExBBNBUSJhMgVxoRRCscHR/9oADAMBAAIRAxEAPwBxGRkbAiSTUdgxy0bEA6JAqMKo4jTw7CjCYRVlRnVwGg98FYnVP1B/m+EL48zq89/FG+OPlmmiGdMaOpi21gnDaDMc6xb7oPqeO4RxY8bySpGjdGYZQFRzrHIHZxPHhDxCW0jEpaNx7OHEscaRzylZkZGRkbCRpoxo3HK1gByWG+ALNgQPVViUW1Vu+O6BKrESbIsN+08t0BARLYzufOUsuo8hsERER1GGEBxGR0lBNgHgqTR/ivw2fvCAFQgnQPBkmk2qL8BpBsqn7hBUuSBxikgJMWwWWE5kOk7EgEgng1x3Qnr6KagkrSQ5dxcX4w/l1KgQXcB7G9j6bIYS6tCrGz7DpF0MohEY0W6twCWu6OofFJ7tndFfrcLmSu0m28XHjs74QALRuNlMagA0UxCuVE8Y0IQH7M7z4mMgvJGQqCiwgR0ERwgxZOj8iQsETCHswJbnFEIrxEcExccSwGVkUtKmYE7COUVCYljAM5eBa+qyC3aOnxiadMCQVHQQhnTCtRUf+Bujm6nNojS5LhGzQjmYtoxa2gjD6LOQtQt90b+J9wjy4QlklSN26NYfQlZzrFvupPqfhDtIAjQDRkevhwrGqRzylbO3jI4jbxsSdRkRzJoSHJYQsqcQKrJcDftPwhWNBtVWpRYXVu3c4Vzpqll1HkNg5RGI3EtjMjI2kPYXMEopPxeA+MIAUAmwDwRKpPxeAg+TTdwgmXKA0h0ANKpuDCCUSgI7jIqgs3GxGjGwqGB1GwY4BjYMOwCZNQpOhtu2QbKrkmyg3mIVR0DBYBNbgUuZ1kdU8LpPds7ortbhsyV2k23i48YfSpxToWg2XXAhljntHeIKApIEYYtVZgcuYM0s5T4p/aEFZQTJfaSW36jxhDAoyO2jUAhylUTS5pEbpqNayyQSeF43PpFo7QI5iAkk+tqZnMDrXHBMLsSqm6g1OvARGSahG2NKyCvqc6mHZHmd8CqUwjCWiWipc5zK7Owb+J4eseS9WaZ0bRRuhpCshah1dQN/E8OG2HIMRiNvHp4cKxqkYSlZ28aeOI4XMSgOS3qeUakk4MD1ValNhdW7YOZgGorVKsOqPM/CBoVjokmzSsuov6DlHIjQgiVSk6+AibGQgPYXgmXSnb4D4wwpaHY3cNYLVTFGoaGkKwSno+DesGCny7IMwmoRLXmWkLG7jvhtjOMyVoyplgH8RYNyaK4EVyOkoJiNM5JPaEWfB51KmX10kq2vcdzQlJPhgVtQbWOYMxerlFZyDKNzuf2gWjp5k4tKQTvPxb4xMskU6spJi7Eg7JfifdAUiRMH92VD087Q8rMOmSVfaIud49NkcBROqVeDxx6YzyOUpNGl0gWVPmJ7YB5WMES6pJ2sdxtEwkk6COV0O8R3JUjMkBjcDIpMvZURy08ImBPOGgJI28cBUaXNSNSBzLRVgTomEXBaCpdc4ZYcfOohJNxOWNpPIfGB1Yqo9lHeT8PjBYD44fSm7AP+Yjye0ZFbNbO4DuEZCFuPcNxJck5kFn12wbiOPzJyMiglnewvE5pKMocTFBTaFO1tLQiqMqQSTYRk5tADVtTkS+3YOMIyrUk3OsST5+dWY6bBuHxjqlpc/WV2dg/F+3rHm5sks09MTaK0qzKOk9p1ldnYPxcTw9YbARGVNGZ47sWNQVGUpNkjxkQTZ6U6nu2wDPqVLtoN3xjWxUFVFaBZNzv2fvAClElyXMaG6CJNIVftCsZCBbi49FRNLpSdfDbDjC8GXMVlQHs5A4bz3+cT1dAqScq05Tr3Q0rFYtk0oHz74LQgDSNhMSyk3DxSSQgzCq0yV5wAbNcPBWMY0Z4AKUgC9hfxiDF6ymMsJlyyldr59Oe+FEhCj98eRMZ975aaHW1kzmBa1YIZw4MPqzAQEZvapX+VKr+UApwJR0QTyc/tCyqUo6UgTS3FcmnfVQ7rwZLlpSGv3mO5uFBHaAB4m/g8cpQlOj+fviMWJQ8Ipys6SgbB5Q7wSdOTaWDfXd5woTObQD1hnIxSkTLactZVuBDdwEdCogbT/Zu9RPS/4U9ZQ9W8I1TTJUwkSJCphGqllgPnuikT8UQ5yJUobLN5/tHErF56ewyO8k+UOwotONCdLICglIOgQB63MIptQkdpQHM3hdNE+aXWtZ8o7kYMTu8zCsa2Jl4tLFhmUeA+MDLxKYeygJ53+ENEYPKQHWvLzKUjziBRkAskFXJKj5m0S5DFxVNVqs8k/tHUvDSbl34loYBa/uyj/mIT6PGxKnH7yEDgHPiS3lBqQyCXhzbh3PEyqVCbqLcyBG1Uqf8A5Kg/xhH9LRLRyqIKH3r3ypKie8CDUxAueR+JPi8ai3o+qNaknHjlHvVGQfL6FYmxFEgN7JajvzBmisYpU5lZBoNeJ3d0MMcrwm/USpRLAWA3nkIS00nNt6u0g6ncPeY4s+Rv4R8lRXk7p5Oa57I/mO7lBxmxEo/O6I1qI3ngNT8I1w4lBfYSlZMpcDTKxrJ8T7t8QTCpWoLbvnWNypL3JbhtjYg5uTtJPjBEqmJ1twiaSkDQWh9LrpMtjJlguOsJ+RQ4ZWaBIdiaVKSNkM8Nq0S1OpAWPwkkDnaIZCmmFapaFpv1AvKL7iNGgeqSoqKkyilL2AOZhz2w9kIbqxWSZwLGSjblckcRHOK1UpSnlzVTA1yUl33QvkSpakZSJomvZwjIz7XNonmYTdKE1CFrOiEDMeRI6o8Ylyf7gR4fh5mzMqVhA1dawnzgWdPmIUpBALEh8xLtZwRsg6TSpQtSJq0yin/yEsdrdQH1hpMoArKphcA20uAYmONRHZXEVocAyx4/EQ6paPOnMlGYDakZm8IOk4Qk7IGx321OEIkzDLSsKKglg5DDXZFaIrwNsZ4UgBz9mgj/AMr+QDCFOJdIphJSqotoyLD+S/jFfmKST9pNKzxWVHwgiXbsSlnkjKP5mi9SJMVWk9lCjxPV9bxwqZOVoyeQc+cSKK9olo/Ut/IfGDaKkRMH/dAq/BLlKUT3gKhagFZo1q7SieZt4CN+xlp1UkHuf47Ya12DGWHVKnLH5jbwJ90LpVQQWRIQOd/RoWpjOpZQeyha+ST72ETp9p92VlH5lAeQBi29HKaetDLmBCT91CE+qgTBuI9G5Kklys81qbwdoe4FCVPI7c1KP0oc/wAxht0ao5NWpSc85ZQxV1whLKdrB30MJ8WwdMsnKIffRgGmT+KZfquElb3B8FupOjtLL7MlHf1vWKz0ymqk5vZhKQClgEgC7bucXmKb06lOiYeKPVMaNJLYE9yjfW5y/veAEcqkLVqpR5kwZh0qGQkCMkXYsocKBNxF26PYchBBypNtofw4wnpUAQ9oahopEssCUjhGoCFUN8agJKhiGEEXzOP0ofzEV+fQVKb5UFO8I9WNotlTiY/B/N+0H0ZdCVAM6QQ/vMcfQRzwk1lporJjU1UW0VCgwmavXIO5X+6GlTgJEtghGb8TrBPcVEQ2konq1kykq3pmFj4h/KO53tQklaQ1+yoqHe6Q3hHvY+zPakeVmh1OLe9ih1NOtBYy/Bf/AKxLR0ue2RQ7wfdDqtIJjuhKU3Nh68BvMaPBiXKOddTm4TOqPouheufwT8REfSHouJEtMxKnBIDEEG4J3kbIsVNiCcu4fOsS9KFBUlAH4kn+UxxZoxX4o7+mnOW02eaqpzuhlR4BMmJCkuEnaUTAOfZ0gw0149CkVktmzo/iEYJbHY/o8mraIy1FKlgttuP6gIGTT5iwV4KEXmuny6h7DMNRw3jhEuB0aEqdh4RDtOmc/cvcoy8GWxVlBA2qWgXPeT5RfKaV1UDchP8ASIg6X1KJktCWBSJ9Luv/AGqV5QRhhBSj9CfQRpkxOFWVhyrJdeA2RLaA8ZwMVS5YyoZIV1lOWciwTt037IPEdy5qgqwJtGZuyhYvhM+QvKlaW2ZUAerxbsDwgTJYVULXNUzdZZYDcwYQuxfDqmbMJzKCToHQG3314+MPcPkTUpY5fH4CHRLZUekPR6Ulf2aQl90PuidOhDnKASXsLB7sOES1mFLWXKwO4n4RPRYZk++e4N74KYWHYosKQRFOXSjM7Qom9Iao13sva/ZurqZU6ZCQHZ9WjnFquapK8qlAhSbpsWKTu4iOeHURnk0LkmUtKbPQcLXlTE9ZV2ih9I6qajCAUzFpm5ZYzhRC3KwCSRfbFHXnU2eZMV+qatW7eqOhqh43rVl+xlYu5A5mJOgE5PtZ4SpJOVDsQWurVo82NGj8KTbcD6xdPovQBPngAD7NOgbRf7wKrNHFpHp4nQqx+kVOlLSlsxbXgofCDgI7SLRciUUyi6OTRqUDvPwg5GDE6KzfpTbuKiAe6JOkuNopEGYtC1pFglKbKWzgLVolIDa6vtaKh0z6ZViFpRL+wQuVLWGCVKVnQCpl3DAnK6dzvEOoqzowYJ556IlwRh8tJZcwpOl0gBzZswJSDweGkvCEDVSj3j4R5J9GtEubWpI7CUrVNe4UlSSgJV+LMpQsfwk7I9Vw2YZcyZTEkhISuWSXPs1EjKTtyqSRyKYqNNB1nT9jJo1WGDDpfHxjIl9pGRVI5SkTqcHRRHO4+PrDihJEtA3ACENHVpXYqSg/mLA/p+EN5U9KUh1ptx47IzaeN/LYrBPXuhmme0QqxBg2p52+eEKp2IA2CkgfqD+sCKrJQ1mSx/nT8Y83P+pNOsUb+zpcLRHjFXLRcjrm4SLd53Dl+8JfrqlFyfgBuG4Q4mV0hQZU2UobitB8nhfOlUh0mpRyUCPA/GOvB+pqSrIpL+Uefk6Jp3GiRGIFots2bnQgcB6R51VTpaNJ8tQ4Kv3g+54u+CVsucl5a0rADEguxADg8bx3SkpK0Rhxyi3qR2uTAAWtH5hw17xDuaAIpcnpZTFuup2cdRT79ojjzvJGnBX7R1pXsGYfLmKUuYgOUlhzLuz62Gn5oPXiRAytlP3uHD55Qvw/pNSy0ZQVEuVKYJ1UX2q3W7o3UdJ6SYLoWTyQ4788dsJx16pHPPpZPFpi6ZBjuIH2Y2tMkq55Z8tTeUWvBFuiX/hp/pEefVNfLVMS0ueuWGJASl3SXSzLuygD3Rf8GmBQSQCAUAgGxAYMDxg6manJNPaiekxSxxcZLyNniCZOIIYqAuSwF23km0SKMLcWxuTTZPalYz5myy1r7LO+UFu0I51ydko7EgnKUQc07UWy6X23jtalMbT+5/3f9oUnp5h2ipyg40MmcLdyY7k9L8KNxPH8E7b/AJY0UkZduXosVDoXChf72p6o4C37wr6WzZok/YqWlT/cd9OEcS+leHBymplh9e0PUR0npdQKH/cyx3n1aM80dcHFOiopxd0UpSVGfKdajZBJfVWUOTxg7CKclMwTFEkkNnUSWY6PsgIVlKFSj7eUAlKgftEi+VQAIe+sKJipJTMyrluSn76Q7ZtL8Y8rN0TjC9V1/wBKhnk204hWNUCU0s5TXCB/UmFY0T87BDbE6iUMOXLE1BUJbZc6SXCgWsYSoVYd3pHZhyOcLarc1irNk+nui4/Rcf7RO/wh/WmKarZyPpFu+i9X9rmDfJPkuX8Y3jyE1senRsCNx0kRqzFCWoSmYKqQtOd05sgYFaFygkAE2fMhQ4Foq/R6WqVSCTiSJS5YyiVLKQubLHWP2hJZNmygXZJ5Rb8VwwzGWhWSYkEBTOClXaQsbUG1tbAhjC7DkGncGhmA260pSZqTlKmIzqSpJ66tm3WDwO2naAsEw/6v7Q0VKpCZozFU1T9jOEpShSgpibh1My3tpDCgClVUxzm9lKShSvzrWqaUW/Cko7iIknVlZO6smQZD6zZ5QSkb0y0KOY/qIHPSDMOok06PZpClXKlKN1LUq6lqO0kw+AnJzdydsmymNRLn4GNwWRR4Oafl4QIZZSS4Zy4Zr2Ae3drDIwtx2UVS1EEjKnMWJHVe+kEVbo7JyUY2QVEwgWfxMKyVhYUc7By/WbSF07K2vnG5E5NsqUqYJ1DMpthDHZvbnG7xVwzl/qG+UOkV5ynayQQ4fUjfE8rFF5gkE9nYopvYC4I3wrTVoU7hLbc3VJB/OhLMLagM3GJCgJUlTqSotZYZ+sD1VJJSSw0d7xhLG0bRyRkWSTX1CRdTHcVJWGtrmCidsNMOx2bl60xKH1/spI7vYgE82ih1NctwHN/jDHEMZN9dsQmaaIvwejScWExnr6dJ3KRMR5TFpgVH0foWypK5JYWUlUzbY/fWNIpOC1CFy860gnMQHfQAbjxMbn1MtKnSlCSNoAB2bdYZPbrhlorfo9qUZjLQFktpNF2caKAaxMIldD8QlpUVSFnrEgJOcsW/C/GJMCxqqUgrl1U5ACilisruNbKJDXh3L6Y1kliZ6JvBclN+9BTBSFWTxRR5VHWS0qEyVPT1rZpSx1QOIvzj2To1Up9nKAUkqElDhw4ZCXtFfR9KE9JZdPLX+mYpB36EKghH0i08wjNTzUHeAhY8QQfKE69kOM3yhvj+KTESpikqykJJBAFm23jzDGukc9QSZkxagCSzgW2sAwJ57o9AXjtBOBSuYkAhiFpUmx3khvOOqboxhc8dQylfpmhXlmMGkcZaVujzTCOk8xa8qQUpAJBIlk2YM2U798GVvSNRKTNVLID9ZdNJWzXGkon/AJi9r+i+nzlcta5bhmARlGmgAG7fCXFPosmEHLUpL7FSiPMLPpA4u9io5IVuVCm6R06l5U08glSkh/qyUgudXSQdsH1tRIIvTyCA+gnp8Mk60Rj6PKqUtBzSlBKkmylB2L7UwZP6G1ajZKcu/M/oHhNO9iouLW9AdXUSJRBXTy0HZ9tOGz8y1DQwNTVFItYCJRKidBWLZ9dChUJanApyCc0iannKUB6RHhUnJPRZiDttqCIKVD5kWuoRS5esiaCdck5Cm/ilCJ01NM1hU/8A5H3iK5OqCHbWF1dWzZpBmLUptrgM+ug4RKVmk40y6+2kH704c5ST6Lh30RxempKgzlTJigZZRl+rzHupJfq5vw+ceSqz/dmLH+Y/GGOAVC/aHMtShkLPsuLxWmtzLSm6Z75P6c0bN7ZSCbdaVODFrXKLR57OqJq2z4rKU2r1cyWdNmZDatFeqagBTqBUAQogKYkbnYtzhfX4vmV9ijIkbFnOfFITxhNtlrEovYsZTW6oxCmUHsBiK3bjcXjCjGPuTwrgnEfjMiqjEph1Qg+I9TEEzFjtkJPh8Ia/YUkvf8HoVPKxdkvMqXYPlqQtjt0m38Y3On42kkJFYpOw+1IJH6QpXrHnAxROnsUh7OwPui5TEywMstCUnKDmDg6b3tBxyCWrj/Ax/wCpY5+Cs/iP+2MhUiTMIB+sIDh2NaxHAj2ljGQX9Bo+0GFUK8Tm/aIB7LEnmDbvv5wwOkI8cqCmZLDAuFG5Oxo6cf5GOfeDBOkVBnUFSUKJPbZKQkEM2VgL74Wf9KqZKTMVLIQzqJI08X2xfMDQgy0pULkZnJUxKuszAs94LrKIN1QG2jKFeAV8YUp1I5lwea09QFENqQQ3zygilqCn2ZBsohCtxd0vfbbXiYs66UpV7VIyKAN0rQlxt6qbwtqpEuatKFunMSrOlKXtcggM+99bHWNYtyiydlJAFTSzMwOUsGPIPEWJKue+CqqXNprk+0ku2YPbgtOqTyseMSy59PNASwCnOp7Ts19LMd2scjg48ndHIpLYhwmZ9kP1H3QHiEy5udIamQQQhCSbmwF9NwhVWU6lEsIS5stv4jfo/PyyG/Ov3fCJaiq8hAGHy1IlAGxClHuLRHUrd+7584G9yl+JBXV6pcz2iWJZiC5Bs2gMPOi1aZspa5gSSFgBw9mfbFTnlyfnZD/oraSsfn/0iG9kZx3mWOdVMGASOISBZ22X3QpxOYlsy73F2c6RLOXr87H+MLsSmOBfnGa3OhrYY09bUSsplTp8sEOnLMWAQbizsdYbSOmeIJt9ZzjdNloPmADHnGIVM0Mj2i8oFk5lMOQe0Cy6uYnRah3mNdPpnJKaumj1uT05qh25Mlf6FKR/VmhtS/SVLFptPOTxTkmD1BjzvoXP9spSZoC2Dh3DXH4SItgRKAshI/yJcWfUh/OJto0jijJWkWaR04w+aWzgH88tQ8wCPOHNFV0U+yVyF8AtKj4O8edrqVG2Ytuc74RzJMpZU6ElidLHWF3K8DfTR9ntE7opQruqllX2hAB8RCSt+jvD1F0yyg/lWv0zN5R5tTTJkv8AuZ9RK4JmqA8EloZSelOJI0qRMG6YhB82c+MPuR9EdmS4kOMQ+jKnHWSuY226T/piPC+gUpJdJJVcdYnQ/pI9IikdPawf3lPKXxSVI96vSGFL9IslJHtaaan9OVQ88ph6osNGVCzEPo6rlElAlKGxphB/mSPWK3V9B8Qlk5qVZ/SUK/pUTHreHfSNhy7GcZZ/PLWnxIBHnDiXj9JO/u6iQvgJiCfB3hqMfDB5Mi5R89TcJno7Umcn9UtYHiYXzZbWNjxLeUfRtVJln7veLekKK/DpbPlUocClX9QgUaF3L8HgjHd74uKl2SfyJ9B8Ytk/BqYnrSEX3y0v4pEFI6N0ywAUsAGDKULbNsS1ZcMiiedzEBzaMj0NfQamJfNNvuUn3pjcLSyu9ErRFoX4lRCZlBUlNzc9oEtoN2sNFiwiKYk2LE7PvebCOpbM5cn40ZJQAAA+zyhvRVJUyFNm2H8XDn6wsoZSiln7JIO9O0AvwIvugibT2uYmTi9rMEqDaygJB0J3EO/K4Y8bxRKtDrlXZpifeG73aL/hc3OQhautsJ+9wPH19VOO9D1pTOniakIQ87LlLhKD7Qh99iB3QY5abTFJXuiq4pOyIL9knKvb1T+7ecRVfRVGVBkTettTMIGbb1SAw5HxiTEEpUCFdl0vyCgT5QWlICAnUMzcAWAvyjplHUzOMnFWJZOITqdeVRIylsqtbjYRs8RB8vIoAgM+/wB2yB6ynXVL9kG9ogjKSWdBD9Y8CD8mOzInSCZc0EJIF2Kpa7apLa8LGOaeH0dePPfIRJkKUQhKSSpTJS1ySAAB3mA6qnW7M2wvbTnHYrZtMpAKnBAWEqcWzEC5uD1eTMYYSZiV3AY7Un5uIwao6rsrsvDSpQClpQCQH7TB9WEN8GlpQlSQoq62pDXbv3RJPpUkuAAY1SoIzg/lPkr4QnK1QRjTsypnkkga/BhCzEZpzMeHoGg+eRnPzeFNU5LtcnYIEi5MXVy3VESUvDCow2aQlYQcpcAmwJGuu5xEUql43jW9jlcbkO+h3VmL4p3cRFlTM1J3PFZ6PgpmHZ1e6H8q42tx7oxk9ztx7QomC7/PCEOIrVKmiajLmD6pcX6p8jDVa2I7/n1hXixBHOw9fdCjyU+BfiHSKcpupKRb7qT7yYikdJpg7SUnk4PvHlEFUkFPi3fC5SG1Ea1F8nHPVF7Ms8jpJKNlJUnuCh5MYKTiklTMtJ59U+bRTSkxyRC7UQ70lyXolJ1A7wD5xHMpJSh2fA+6KXLmKT2SRyJHpBcrF5ybZnG4gH94TxFLqC1yJakf3c5cttgJA/lIg+XilcAwqXG5RB/qBMVGXj6mZSEnkSPK4guRjiFEBlAkgBw/peJcJI0WaL5LSnH6pB6yJa+LMfX3QdS9Oslpkgp4hfuKffAuF4VLmJCzOJDl0pBBDM4dQ90WPDqWTLSFIQB1mzEOrViSVOfBoI37G4J/2kkvphLIB9jU/wACf90aiwU02SUg5U/wg+oJjI039mfbj6KbKwyctsstfeMo84dYb0em5SlawgqLgABV9hJOmkWwSQIzKxjRs5HJsoYpMijmJKx1ToNDpYXYv4xIRFi6S0LKE0CyrK/UND3i3dFfnrAG8+kNQ1ESaSApkqD5+JGZSVEhbe0VImoQokAKKpagAomwLnU/8rVzCefHSFdZTylA5ilX61gkbWIUbEco0lD2ZxlYgmSHSUzJ0pKmKTkUZqnI/ChPqYIQXQTftK1SU630UAdsNZGKAgSyla1aJMtIZW4FRZIPfeB8Rz/eRk4FaVK7wNB46woTlqpjmk47COnQRUhYJDSzp+oJ/wBQh2K1Y0Vvsq6TZmO0QiqZhCg20LT4pJHmkeENJhe++/jeN4pamZvhAWP0wno9ogBK02KLXCdoA5+6K9Q4rMlW7Sdx9x2Q6r1lK5axrmCTxCrN87ogocKT9ZyzEEo7Q1AvoCR3iM8sFextjm6OJGME2HWG5Wo5GGlBPQvNkUAot1Va2fT8Wu+Mxrowlf2tKBpeW7F96fg/KEqFFsi+0nUKDLHA7fGOeeFo6sfUJ8llxSSj2qvZpZHVbMSo9kO5tteAJ0hW/wAGHnG8PrMyWJzgfxDgdsFS54UWQoP+E6+BjGVm6doUVCCQAXLOzm4eIGO0Aw+mISbFN4Dm0W68LUGkHwq0y242h8jsuPljCWkQRMSNDcfymG8hgGfv3m7esI1jwczFXHz86QqxGb1B3Hzgqaetts/oYBrVlm4H1f3Q0gbF1TYu0QlQ/wCYmnrJSOd4GI4GLMJMwBJjRk7jHQlnUR3mbUQWTSfIOuUd3hERQ0HhQjZQ+4iGpicBclLlo7lpIUDuI8jBSqYbo0KfiPOHqJ0Ho/RdbyjvzkD+EG/zth2CcqgeJ9PhFd6MTOor/E8ilPwh+WZ94PpGUUd0mMaGuSlCRufYN5jULpekZGlGZ6NEawrcfCJwd0RqJZhb5PxMWeacz6QTUGWsWI8DsPiPKKfWUCkpYSySSUgBJLkEgs2uh8IuiZm8bX+fGFfS6syIkrTLBCJiSTttcAncSI1hOjKcLKP9XWcvVPXLJsetdurvuYiqaUpPWGVW8i4cdUnhp3QVIrigymSD7NecX1cpLH+DzjqVjkxIANwCbJOT8DMEBktk2DRahti3JsFFIr1bRFdlKXbZmCR/IxPjHOHS5d5ZloSo6Lyh1cFK1zcXv6m1C1qUVOgPsyaa2DEOLgX3QBU0AUXUtZ4PlHJktbm8S1ZSZqsoaYKGcgKdxlUxfkly8DTwNACBsBBBbZY3hrQV8mQkpXklMLKAAccWDk+sLMSrUTFZ0CZlLAqUhSQSx0JGjCDE2pUxZFa2FWKIeWreLjmLiC6KcZilKLnMoKHJaQphyeI54cEQPhM9kpB07L8UKUPTLHTxIyW8RsioyqzaKAIB52uI4qlypyQKgAHZMFiBZmPqPI6xHUawOV7NQYFESkKKrDl000dbMlXZWNvA8Y2ZSluraFNuNgC/83lDCdOK/sVM2XqFhYpv36+RGkKqerYAKITcvzdvdHPlxpcHZhmw2Ri6kdWZ1xo/3h8YPRMChmlqfhtHOHvRro/Q1MlaqiejMNCiYnMgEC6rXvsLiK1i+BKp1/ZTPaSySErSlQcgFRBB0IAJcOLaxyShZ1xyRbo7XMJKXF39xEGyU9otYM52X0c7NYU0eIEkCYB+rbFnkVp+rKkoIyKWJhGrqAAcvfYLcIiMfZrbS2EM1fWsbQNN3/vDWbJfWBJlGRpBYnuRYziGf2bJSkJlpQyUgCxN7WJL6woUx/b4Qxm0pPCIPqpinKyNAHlbb7vKJJaQbQR7J+0TawcksOD7IkRLSLCFY6oEVL3eIv4xwUfI+EMhLTsYc7HuiFaCNRffr56iFYNA0s8YlUlhs9I1lHLu+EaI2AiHyJFy6LHqk/nH9IiwEhu7fwaK30WcpWOKPNx7osGweHkYEbsiWovG45I4bvSMi6IPVY4MZGRbPNNQDjgenm/pMZGQ0Jnny9IGXGRkbIgjXAGLLIRYkcuUZGQ/ICbDZSSgKIBUdVMHPfrFrq+tTl7/AGYN73y6xkZGcxryVIqLDlCRUwj2jE6qOu32iQ/mYyMjpnyiMXktNTrAqoyMjSJiDzf76TzPouAcYHXPIekZGQeH+/8Ao1jyhNLmFKgpJIINiCxHIiPfaw/bYZ/iKPf9VmRkZHB5Ogon0hyEIxBaUJSkZUFkgAOXcsNphNRllFrXGkZGRgzvh+KHU8a/OyB3jIyMyjhYt3+6Bpw1jIyACBrxAuMjIaEyPYIMkatGRkMkgrx74DMZGQ0R5Lb0T7Ez/wCv/VFgVoO/1MZGQo8nUzqXoIyMjIozP//Z" width="300px" height="250px">
+      <p class="hostel-name">Apex Library</p>
+      <button class="ratings">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+      </svg>
+      <span> 4.8</span> </button>
+      <button class="gender-category"> Open 24 hours</button>
+      <a href="booking.html?type=Library&name=apex%20Library" class="book-btn">Book Now</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="location-image" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
+      </svg>
+      <span class="hostel-location"> No-330, BMB Sweets Road, Mahaveer Nagar, Kota-Rajasthan - 324005 (Behind Narcotics Office, Patrakar Colony)</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="telephone-image" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+      </svg>
+      <span class="contact-number">07411824658</span>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <img src="https://content.jdmagicbox.com/comp/kota-rajasthan/q9/9999px744.x744.190802163530.d5q9/catalogue/openbook-library-mahaveer-nagar-ii-kota-rajasthan-libraries-ttagovz13j.jpg" width="300px" height="250px">
+      <p class="hostel-name">Eduscape Library</p>
+      <button class="ratings">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+      </svg>
+      <span> 4.6</span> </button>
+      <button class="gender-category"> Open 24 hours</button>
+      <a href="booking.html?type=Library&name=eduscape%20Library" class="book-btn">Book Now</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="location-image" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/>
+      </svg>
+      <span class="hostel-location"> G129, Indra Colony, Vigyan Nagar, Kota-Rajasthan - 324005 (Near Vinayak Fast Food, Near Mahaveer Medical)</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="telephone-image" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+      </svg>
+      <span class="contact-number">08123778365</span>
+    </div> 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const user = JSON.parse(localStorage.getItem("user"));
+        const authSection = document.getElementById("auth-section");
+
+        if (user && user.email) {
+          authSection.innerHTML = `
+            <a class="my-bookings" href="mybookings.html">My Bookings</a>
+            <div class="dropdown">
+              <a class="btn btn-success dropdown-toggle" href="#" role="button" 
+                id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                👋 ${user.name}
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#" id="logout-btn">Logout</a></li>
+              </ul>
+            </div>
+          `;
+
+          document.getElementById("logout-btn").addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.removeItem("user");
+            localStorage.removeItem("token");
+            window.location.reload();
+          });
+        }
+      });
+    </script>
+ 
+</body>
+</html>

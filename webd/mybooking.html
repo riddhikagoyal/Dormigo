@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Bookings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      background-color: #000;
+      padding: 50px;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+      background: white;
+    }
+    .card-header {
+      background: #007bff;
+      color: white;
+    }
+    .search-filter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .my-bookings {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+    table {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card p-4">
+  <h3 class="mb-4"><i class="fas fa-clipboard-list"></i> My Bookings</h3>
+
+  <div class="search-filter">
+    <input type="text" id="searchInput" class="form-control" placeholder="Search bookings...">
+    <select id="statusFilter" class="form-select" style="max-width: 200px;">
+      <option value="">All Status</option>
+      <option value="Confirmed">Confirmed</option>
+      <option value="Pending">Pending</option>
+      <option value="Cancelled">Cancelled</option>
+    </select>
+  </div>
+
+  <table class="table table-bordered table-hover">
+    <thead class="table-primary">
+      <tr>
+        <th>Booking ID</th>
+        <th>Type</th>
+        <th>For</th>
+        <th>Name</th>
+        <th>Payment</th>
+        <th>Status</th>
+        <th>Booking Time</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="bookingsTable"></tbody>
+  </table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+
+<script>
+  const bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
+  const tableBody = document.getElementById('bookingsTable');
+
+  function generateId() {
+    return 'BKG' + Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+  }
+
+  function loadBookings() {
+    tableBody.innerHTML = '';
+
+    if (bookings.length === 0) {
+      tableBody.innerHTML = '<tr><td colspan="8" class="text-center text-danger">No bookings found.</td></tr>';
+      return;
+    }
+
+    bookings.forEach((b) => {
+      if (!b.id) b.id = generateId();
+      if (!b.status) b.status = 'Confirmed';
+      if (!b.for) b.for = b.destination || b.pickup || '-';
+      if (!b.payment || b.payment.trim() === '') b.payment = 'Not Paid';
+      if (!b.name) b.name = '-';
+      if (!b.type) b.type = 'General';
+      b.type = b.type.charAt(0).toUpperCase() + b.type.slice(1);
+      if (!b.timestamp) b.timestamp = Date.now();
+    });
+
+    // ✅ Sort by latest first
+    bookings.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+
+    // ✅ Render table rows
+    bookings.forEach((booking) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${booking.id}</td>
+        <td>${booking.type}</td>
+        <td>${booking.for}</td>
+        <td>${booking.name}</td>
+        <td>${booking.payment}</td>
+        <td>${booking.status}</td>
+        <td>${new Date(booking.timestamp).toLocaleString()}</td>
+        <td>
+  ${booking.status !== 'Cancelled'
+    ? `<button class="btn btn-sm btn-danger" onclick="cancelBooking('${booking.id}')">Cancel</button>
+       <button class="btn btn-sm btn-outline-danger mt-1" onclick="deleteBooking('${booking.id}')">Delete</button>`
+    : `<button class="btn btn-sm btn-outline-danger" onclick="deleteBooking('${booking.id}')">Delete</button>`}
+</td>
+
+      `;
+      tableBody.appendChild(row);
+    });
+
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+  }
+
+  function cancelBooking(id) {
+    if (!confirm("Are you sure you want to cancel this booking?")) return;
+
+    const index = bookings.findIndex(b => b.id === id);
+    if (index !== -1) {
+      bookings[index].status = "Cancelled";
+      localStorage.setItem('bookings', JSON.stringify(bookings));
+      loadBookings();
+    }
+  }
+function deleteBooking(id) {
+  if (!confirm("Are you sure you want to permanently delete this booking?")) return;
+
+  const updatedBookings = bookings.filter(b => b.id !== id);
+  localStorage.setItem('bookings', JSON.stringify(updatedBookings));
+  alert("Booking deleted successfully.");
+  location.reload();
+}
+
+  const searchInput = document.getElementById('searchInput');
+  const statusFilter = document.getElementById('statusFilter');
+
+  function filterTable() {
+    const searchValue = searchInput.value.toLowerCase();
+    const statusValue = statusFilter.value.toLowerCase();
+    const rows = document.querySelectorAll('#bookingsTable tr');
+
+    rows.forEach(row => {
+      const rowText = row.innerText.toLowerCase();
+      const statusText = row.children[5]?.innerText.toLowerCase();
+      const matchesSearch = rowText.includes(searchValue);
+      const matchesStatus = statusValue === '' || statusText.includes(statusValue);
+      row.style.display = (matchesSearch && matchesStatus) ? '' : 'none';
+    });
+  }
+
+  searchInput.addEventListener('input', filterTable);
+  statusFilter.addEventListener('change', filterTable);
+
+  loadBookings();
+</script>
+
+</body>
+</html>
