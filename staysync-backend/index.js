@@ -37,6 +37,8 @@ const PORT = process.env.PORT || 5000;
 if (!process.env.JWT_SECRET) {
   throw new Error("❌ JWT_SECRET is not defined in .env file");
 }
-app.listen(PORT, () => console.log(`🚀 Server started on http://127.0.0.1:${PORT}`));
+app.listen(PORT, () => {
+  console.log(`🚀 Server started on port ${PORT}`);
+});
 
 
